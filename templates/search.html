@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+	Search Page
+{% endblock title %}
+
+{% block content %}
+     <br>
+	 <div class="searchbar">
+     	<input data-url="{% url "get_search" %}" class="search_input" type="text" name="" placeholder="username...">
+     	<a href="#" class="search_icon"><i class="fa fa-search"></i></a>
+    </div>
+    <br>
+   
+	<div id="users">
+		
+	</div>
+
+{% endblock content %}
+
+{% block scripts %}
+	<script>
+		$(function(){
+			$('input.search_input').keyup(function(){
+				var input = $('.search_input');
+
+				$.ajax({
+					url: input.attr("data-url"),
+					data: {
+						"input":input.val()
+					},
+					type: "get",
+					dataType:"json",
+					success : function(data){
+						if (data.is_exists){
+							$('#users').html(data.html_value);
+						} else {
+							$('#users').html("");
+						}
+					}
+				});
+
+			});
+		});
+	</script>
+{% endblock scripts %}
