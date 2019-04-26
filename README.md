@@ -1,4 +1,4 @@
-# 
+#  Tự động hiện thị kết quả tìm kếm bằng AJAX
 
 <a target="_blank" href=""><img src="" alt="" /></a>
 
@@ -18,7 +18,7 @@ $ git clone
 Cài đặt requirements:
 
 ```bash
-$ cd myproject-django
+$ cd jquery-autocomplete
 $ source env/bin/activate
 ```
 
