@@ -12,7 +12,7 @@
 Đầu tiên, tải repository về máy tính:
 
 ```bash
-$ git clone 
+$ git clone https://github.com/batTrung/jquery-autocomplete.git
 ```
 
 Cài đặt requirements:
