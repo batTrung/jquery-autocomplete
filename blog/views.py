@@ -11,6 +11,9 @@ def search(request):
 def get_search(request):
 	data= {}
 	input = request.GET.get("input")
+	if input == '':
+		data['is_exists'] = False
+		return JsonResponse(data)
 	users = User.objects.filter(username__contains=input)
 	if users.exists():
 		data['is_exists'] = True
@@ -20,3 +23,4 @@ def get_search(request):
 		data['is_exists'] = False
 
 	return JsonResponse(data)
+	

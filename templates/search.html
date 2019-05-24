@@ -6,23 +6,33 @@
 
 {% block content %}
      <br>
-	 <div class="searchbar">
-     	<input data-url="{% url "get_search" %}" class="search_input" type="text" name="" placeholder="username...">
-     	<a href="#" class="search_icon"><i class="fa fa-search"></i></a>
+	 <div class="custom-file">
+     	<input data-url="{% url "get_search" %}" class="form-control" type="text" name="" placeholder="username...">
+     	<a href="" class="search_icon"><i class="fa fa-search"></i></a>
     </div>
     <br>
    
-	<div id="users">
-		
-	</div>
+	<table class="table table-hover">
+		<thead>
+		  <tr>
+		  	<th>Username</th>
+		    <th>Firstname</th>
+		    <th>Lastname</th>
+		    <th>Email</th>
+		  </tr>
+		</thead>
+		<tbody id="users">
+		  
+		</tbody>
+	</table>
 
 {% endblock content %}
 
 {% block scripts %}
 	<script>
 		$(function(){
-			$('input.search_input').keyup(function(){
-				var input = $('.search_input');
+			$('input').keyup(function(){
+				var input = $('input');
 
 				$.ajax({
 					url: input.attr("data-url"),
