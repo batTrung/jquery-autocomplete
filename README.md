@@ -1,6 +1,6 @@
-#  Tự động hiện thị kết quả tìm kếm bằng AJAX
+# Một ví dụ về sử dụng Ajax trong Django
 
-<a target="_blank" href=""><img src="" alt="" /></a>
+<a target="_blank" href=""><img src="https://www.djangobat.com/media/posts/2019/05/24/auto.jpg" alt="" /></a>
 
 
 ## BLOG djangobat
